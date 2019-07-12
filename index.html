@@ -11,8 +11,12 @@
      ReactDOM.render(
        React.createElement(
          "h1",
-         {"style": {"color":"red"}},
-         "Hello World"
+         null,
+         React.createElement(
+           "h1",
+           null,
+           "oh hi"
+         )
        ),
        document.getElementById('root')
      );
