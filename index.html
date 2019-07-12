@@ -15,7 +15,9 @@
    <div id="root"></div>
    <script type="text/babel">
 
-   const Hello = () => {
+   const Hello = (props) => {
+     console.log("props:", props);
+
      return (
         <div className="heading">
           <h1>Welcome to React</h1>
