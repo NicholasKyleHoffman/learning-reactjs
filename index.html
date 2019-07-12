@@ -17,13 +17,18 @@
 
    const Lake = ({name}) => <h1>{name}</h1>;
 
-   const App = () => (
-     <div>
-      <Lake name="Tahoe" />
-      <Lake name="Angora Lake" />
-      <Lake name="Shirley Lake" />
-     </div>
-   );
+   class App extends React.Component {
+     render(){
+       return(
+         <div>
+          <Lake name="Tahoe" />
+          <Lake name="Angora Lake" />
+          <Lake name="Shirley Lake" />
+          <Lake name="Cathedral Lake" />
+         </div>
+       )
+     }
+   }
 
   //   const Hello = ({library, message}) => {
   //    console.log("props:", props);
