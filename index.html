@@ -16,22 +16,21 @@
         <div id="root"></div>
         <script type="text/babel">
 
-            const Lake = ({name}) => <h1>{name}</h1>;
-            const SkiResort = ({name}) => <h1>{name}</h1>;
+            const lakeList = [
+              "echo lake",
+              "maud lake",
+              "cascade lake"
+            ];
 
-            const App = ({summer}) => (
-// console.log(this.props.summer);
-
-                <div>
-                    {summer
-                        ? <Lake name="Lake Tahoe"/>
-                        : <SkiResort name="Alpine Meadows"/>}
-                </div>
+            const App = ({lakes}) => (
+              <ul>
+                {lakes.map(lake => <li>{lake}</li>)}
+              </ul>
             )
 
 
             ReactDOM.render(
-                <App summer={false}/>,
+                <App lakes={lakeList} summer={false}/>,
                 document.getElementById("root")
             );
         </script>
