@@ -1,63 +1,39 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>Learning React.js - LinkedIn Learning</title>
-   <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
-   <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
-   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-   <style>
-     #heading {
-       color: pink;
-     }
-   </style>
- </head>
- <body>
-   <div id="root"></div>
-   <script type="text/babel">
+    <head>
+        <title>React Project</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            .heading {
+                color: purple;
+            }
+        </style>
 
-   const Lake = ({name}) => <h1>{name}</h1>;
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
 
-   class App extends React.Component {
-     state = {
-       loggedIn: false
-     }
-     logIn = () => this.setState({loggedIn: true})
-     logOut = () => this.setState({loggedIn: false})
+            const Lake = ({name}) => <h1>{name}</h1>;
+            const SkiResort = ({name}) => <h1>{name}</h1>;
 
-     render(){
-       return(
-         <div>
-          <button onClick={this.logIn}>Log In</button>
-          <button onClick={this.logOut}>Log Out</button>
+            const App = ({summer}) => (
+// console.log(this.props.summer);
 
-          <div>The user is {
-               this.state.loggedIn
-               ? "logged in"
-               : "not logged in"}</div>
-          <Lake name="Tahoe" />
-          <Lake name="Angora Lake" />
-          <Lake name="Shirley Lake" />
-          <Lake name="Cathedral Lake" />
-         </div>
-       )
-     }
-   }
+                <div>
+                    {summer
+                        ? <Lake name="Lake Tahoe"/>
+                        : <SkiResort name="Alpine Meadows"/>}
+                </div>
+            )
 
-  //   const Hello = ({library, message}) => {
-  //    console.log("props:", props);
-  //
-  //    return (
-  //       <div className="heading">
-  //         <h1>Welcome to {library}</h1>
-  //           <p>{message}</p>
-  //       </div>
-  //    )
-  // };
 
-    ReactDOM.render(
-       <App />,
-       document.getElementById('root')
-     );
-   </script>
- </body>
+            ReactDOM.render(
+                <App summer={false}/>,
+                document.getElementById("root")
+            );
+        </script>
+    </body>
 </html>
