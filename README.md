@@ -3,7 +3,8 @@ Hosted on github.io:
 <br>
 https://nicholaskylehoffman.github.io/learning-reactjs/
 
-To serve/test locally:
+To serve/test production build locally:
+"npm build"
 <br>
 "npm install serve -g"
 <br>
