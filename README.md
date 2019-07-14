@@ -3,6 +3,14 @@ Hosted on github.io:
 <br>
 https://nicholaskylehoffman.github.io/learning-reactjs/
 
+To serve/test locally:
+<br>
+"npm install serve -g"
+<br>
+"npm serve -s"
+<br>
+Navigate to: http://localhost:5000  
+
 Download/clone repo
 <br>
 Drag file into browser window
