@@ -1,5 +1,5 @@
 # learning-reactjs
-Hosted on github.io:
+<strong>Hosted on github.io</strong>:
 <br>
 https://nicholaskylehoffman.github.io/learning-reactjs/
 
